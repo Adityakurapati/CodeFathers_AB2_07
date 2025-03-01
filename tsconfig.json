@@ -25,6 +25,6 @@
       "@utils/*": ["./utils/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/utils.js", "lib/mongodb.js", "lib/auth.js", "lib/actions/auth-actions.js", "lib/models/user.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/utils.ts", "lib/mongodb.js", "lib/auth.ts", "lib/actions/auth-actions.ts", "lib/models/user.js"],
   "exclude": ["node_modules"]
 }
