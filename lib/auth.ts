@@ -1,5 +1,5 @@
 import { cookies } from "next/headers";
-import jwt from "jsonwebtoken";
+import { jwtVerify, importSPKI } from "jose"; // Use jose instead of jsonwebtoken
 import { User } from "@/lib/models/user";
 import { connectToDatabase } from "@/lib/mongodb";
 
@@ -21,18 +21,18 @@ export async function getSession(): Promise<Session | null> {
   }
 
   try {
-    const decoded = jwt.verify(token, JWT_SECRET) as {
-      userId: string;
-      email: string;
-      name: string;
-      bloodType: string;
-    };
+    // Convert JWT_SECRET to Uint8Array for jose
+    const secretKey = new TextEncoder().encode(JWT_SECRET);
 
+    // Verify the token using jose
+    const { payload } = await jwtVerify(token, secretKey);
+
+    // The payload has the JWT claims
     return {
-      userId: decoded.userId,
-      email: decoded.email,
-      name: decoded.name,
-      bloodType: decoded.bloodType,
+      userId: payload.userId as string,
+      email: payload.email as string,
+      name: payload.name as string,
+      bloodType: payload.bloodType as string,
     };
   } catch (error) {
     console.error("Session verification error:", error);
