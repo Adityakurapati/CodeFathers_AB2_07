@@ -1,54 +1,174 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Donation & Emergency Help</title>
-</head>
-<body>
-    <h1>Blood Donation & Emergency Help 🩸</h1>
-    
-    <h2>Team: <strong>CodeFathers</strong></h2>
-    <h3>Project Statement ID: <strong>07</strong></h3>
+# BloodConnect: Gamified Blood Donation & Emergency Matching
 
-    <h2>🚀 Overview</h2>
-    <p><strong>Blood Donation & Emergency Help</strong> is a platform designed to connect blood donors with recipients in emergencies. 
-        It facilitates easy blood requests, donor registrations, and emergency contacts, ensuring timely and life-saving donations.</p>
+## 🩸 Introduction
+BloodConnect is an innovative platform that connects blood donors with recipients in real-time emergencies while making the donation process engaging and rewarding. By utilizing location-based matching, BloodConnect quickly identifies nearby donors, ensuring timely assistance during critical situations. Through gamification, donors earn points, badges, and exclusive rewards, encouraging regular participation and community involvement. Partner integrations further enhance the donor experience by offering perks and promoting blood donation awareness.
 
-    <h2>📷 Project Images</h2>
+---
 
-     <h3>🏠 Default Page</h3>
-    <img src="/public/readme/hero.png" alt="Login Page" width="200">
-     <h4>Click On Register</h4>
+## 🔄 Workflow
+1. **User Registration**: Donors & recipients register with blood type, location, and availability.
+2. **Emergency Request**: Hospitals or recipients submit blood requests.
+3. **Donor Notification**: Real-time alerts notify matched donors.
+4. **Donation Tracking**: Each donation is recorded on the blockchain.
+5. **Gamification & Rewards**: Earn points, badges, and sponsor rewards, and share social media posts.
 
-     <h3>🆕 Registration Page</h3>
-    <img src="/public/readme/register.png" alt="Login Page" width="200">
-     <h4>Create A New User</h4>
+---
 
-    <h3>🔐 Login Page</h3>
-    <img src="/public/readme/login.jpg" alt="Login Page" width="200">
-     <h4>Login WIth Previous Registration Details</h4>
+![System Flow](https://github.com/user-attachments/assets/caea5acc-5d86-482a-9adb-23730d5e9f36)
+
+---
+
+## 📦 Installation & Setup
+### 🔹 Clone the Repository
+```bash
+git clone https://github.com/Adityakurapati/CodeFathers_AB2_07.git
+```
 
 
+## 🎨  Setup
 
-    <h3>🤝 Recipient Section</h3>
-    <img src="/public/readme/recipient1.jpg" alt="Recipient Image 1" width="200">
-     <h4>Click on Create New Request</h4>
+```bash
+npm install --legacy-peer-deps
+npm install date-fns@3.0.0
+npm install
+npm run dev
+```
+*test_email: test@gmail.com*
 
-       <h3>📩 Blood Requests</h3>
-    <img src="/public/readme/request1.jpg" alt="Request 1" width="200">
-    <img src="/public/readme/request2.jpg" alt="Request 2" width="200">
-    <img src="/public/readme/request3.jpg" alt="Request 3" width="200">
-    <img src="/public/readme/request4.jpg" alt="Request 4" width="200">
-     <h4>FIll All Details And Make A Blood Request </h4>
+*password: 12345678*
 
-       <h3>📩 You Will See The New Request</h3>
-    <img src="/public/readme/repient.jpg" alt="Recipient Image (Misspelled)" width="200">
-     <h4>In Map View In Show the Distance Between Donar And Recipient </h4>
+*OTP: 123456*
 
-     <h3>🩸 Donor Section</h3>
-    <img src="/public/readme/donar.jpg" alt="Donor Image" width="200">
-     <h4>Login WIth Previous Registration Details</h4>
-  
-</body>
-</html>
+
+
+## ❗ Problem Statement
+1. **Timely Access**: Quick and efficient donor-recipient connection during emergencies.
+2. **Donor Engagement**: Encouraging regular donations and donor retention.
+3. **Transparency**: Establishing trust in the donation process.
+4. **Awareness**: Motivating more people to donate blood through social sharing and rewards.
+
+---
+
+## 💡 Solution Overview
+BloodConnect addresses these challenges through:
+- **Real-Time Donor Matching**: Geospatial AI matches donors with recipients.
+- **Predictive Analytics**: Forecasts blood demand and proactively recruits donors.
+- **Gamified Donor Engagement**: Encourages donations through rewards and social sharing.
+- **Blockchain-Based Transparency**: Tracks donations from donor to recipient.
+- **Sponsor Integration**: Partners with companies to provide rewards and raise awareness.
+
+---
+
+## 🔥 Features
+### 1️⃣ Real-Time Donor Matching
+- **Geospatial AI**: Matches donors based on proximity and blood type.
+- **Emergency Alerts**: Sends real-time notifications to available donors.
+- **Donor Availability**: Allows donors to update their status.
+
+### 2️⃣ Gamified Donor Engagement
+- **Points System**: Earn points for each donation.
+- **Badges & Certificates**: Unlock badges like "Lifesaver" and receive blockchain-based certificates.
+- **Sponsor Rewards**: Receive coupons, discounts, or freebies from sponsors.
+- **Social Sharing**: Generate posts with sponsor tags to encourage more donations.
+
+### 3️⃣ Blockchain-Based Transparency
+- **Immutable Records**: Tracks the journey of donations from donor to recipient.
+- **Donor Updates**: Provides insights into how the donated blood was used.
+
+### 4️⃣ Sponsor Integration
+- **Advertisements**: Sponsors can promote their brands on the platform.
+- **Coupons & Rewards**: Sponsors provide incentives for donors.
+- **Social Media Campaigns**: Donations trigger automatic posts featuring sponsor tags.
+
+---
+
+## 🎮 Gamified Approach with Sponsor Integration
+### 🏅 Points & Badges
+- Earn points for each donation.
+- Unlock and display badges on donor profiles.
+- Share achievements on social media to inspire others.
+
+### 🎁 Sponsor Rewards
+- Receive sponsor-provided discounts, coupons, or freebies.
+- Example: A 10% discount coupon after donating blood.
+
+### 📢 Social Sharing
+- Auto-generated posts after donation:
+  - **Example:** "🩸 I just donated blood and saved a life! Proudly supported by [Sponsor Name]. Join me in making a difference. #BloodConnect #DonateBlood #SaveLives"
+- Posts include sponsor branding and calls to action.
+
+### 🌟 Sponsor Benefits
+- **Brand Visibility**: Sponsor logos and tags are included in social media posts.
+- **User Engagement**: Donors share branded posts, increasing visibility.
+- **CSR Opportunities**: Showcase commitment to social causes.
+
+---
+
+---
+## 📸Screenshots
+
+![Image](https://github.com/user-attachments/assets/f7dce108-6f84-4f0b-912b-f0d40cebaff2)
+![Image](https://github.com/user-attachments/assets/7ad04528-c792-45ac-902e-64f1d692a964)
+
+---
+## 🔗Deployed URL
+
+[Blood Connect🩸](https://code-fathers-ab-2-07-adityakurapatis-projects.vercel.app/)
+
+---
+## 🎥Demonstration video
+[Demo Video](https://drive.google.com/drive/folders/1NWAEL8yl_n1Pjb32LB8grjRZBvrFFyn_?usp=sharing)
+
+
+
+---
+
+## 🛠 Tech Stack
+### 📌 Frontend
+- **Next.js**: User interface development.
+- **Tailwind CSS**: Styling and responsive design.
+
+### 📌 Backend
+- **Next.js & Express.js**: API development.
+
+### 📌 AI/ML
+- **Python**: Predictive analytics & geospatial AI.
+- **TensorFlow**: Machine learning models.
+
+### 📌 Blockchain
+-  **Transparent donation ledger**
+- **Smart Contracts**
+
+### 📌 Database
+- **MongoDB**: Stores user data and donation records.
+
+### 📌 APIs
+- **Google Maps API**: Geospatial donor matching.
+
+---
+
+## 🔮 Future Enhancements
+1. **Integration with Wearable Devices**: Use real-time health data to identify potential donors.
+2. **AI-Powered Chatbots**: Provide 24/7 support and answer donor queries.
+3. **Global Expansion**: Partner with international organizations to scale globally.
+4. **Advanced Analytics**: AI-driven donor behavior analysis for optimized engagement.
+
+---
+
+## 🤝 Sponsor Partnership Proposal
+### 📌 Benefits for Sponsors
+- **Brand Visibility**: Featured logos and mentions in posts.
+- **User Engagement**: Increased exposure through donor-shared posts.
+- **CSR Opportunities**: Highlight contributions to a social cause.
+
+### 📌 Partnership Models
+1. **Tier 1**: Sponsors provide rewards and gain social media visibility.
+2. **Tier 2**: Sponsors contribute to platform development and receive prominent branding.
+3. **Tier 3**: Long-term co-branding partnership with BloodConnect.
+
+---
+
+## 🎯 Conclusion
+BloodConnect is more than just a platform; it’s a movement to save lives and revolutionize blood donation. By integrating AI, blockchain, and gamification, we ensure timely access to blood supplies, engage donors, and maintain transparency. Our sponsor integration and social sharing features create a win-win scenario for donors, recipients, and sponsors alike.
+
+📌 **Join BloodConnect today and be a lifesaver!** 🩸
