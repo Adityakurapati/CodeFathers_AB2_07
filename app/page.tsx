@@ -43,7 +43,7 @@ export default function Home() {
                                                 <Link href="/login" className="text-sm font-medium">
                                                         Login
                                                 </Link>
-                                                <Link href="/register">
+                                                <Link href="/register2">
                                                         <Button size="sm" variant="secondary">
                                                                 Register
                                                         </Button>
