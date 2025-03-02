@@ -33,7 +33,7 @@ export default function LoginPage() {
 
                                         <div className="text-center text-sm">
                                                 Don't have an account?{" "}
-                                                <Link href="/register" className="underline text-red-600">
+                                                <Link href="/register2" className="underline text-red-600">
                                                         Register
                                                 </Link>
                                         </div>
