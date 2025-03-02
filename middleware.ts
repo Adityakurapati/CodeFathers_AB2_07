@@ -37,6 +37,7 @@ export function middleware(request: NextRequest) {
   return NextResponse.next();
 }
 
+// Add a configuration specific to middleware
 export const config = {
   matcher: ["/dashboard/:path*", "/profile/:path*", "/login", "/register"],
 };
