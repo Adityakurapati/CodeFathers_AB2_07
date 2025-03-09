@@ -14,10 +14,6 @@ BloodConnect is an innovative platform that connects blood donors with recipient
 
 ---
 
-![System Flow](https://github.com/user-attachments/assets/caea5acc-5d86-482a-9adb-23730d5e9f36)
-
----
-
 ## 📦 Installation & Setup
 ### 🔹 Clone the Repository
 ```bash
@@ -33,12 +29,6 @@ npm install date-fns@3.0.0
 npm install
 npm run dev
 ```
-*test_email: test@gmail.com*
-
-*password: 12345678*
-
-*OTP: 123456*
-
 
 
 ## ❗ Problem Statement
@@ -106,20 +96,18 @@ BloodConnect addresses these challenges through:
 
 ---
 ## 📸Screenshots
+### App
 
+login & dashboard
+![Image](https://github.com/user-attachments/assets/25f685a0-f9d9-446a-85f9-0d7e1c49d4f4)
+
+
+profile & dashboard
+![Image](https://github.com/user-attachments/assets/88c4c0c0-907e-4939-b33b-e12db3ef7e5e)
+![Image](https://github.com/user-attachments/assets/43851d1d-7708-4f9d-abf9-0128cabb9c18)
+
+### Web-pages
 ![Image](https://github.com/user-attachments/assets/f7dce108-6f84-4f0b-912b-f0d40cebaff2)
-![Image](https://github.com/user-attachments/assets/7ad04528-c792-45ac-902e-64f1d692a964)
-
----
-## 🔗Deployed URL
-
-[Blood Connect🩸](https://code-fathers-ab-2-07-adityakurapatis-projects.vercel.app/)
-
----
-## 🎥Demonstration video
-[Demo Video](https://drive.google.com/drive/folders/1NWAEL8yl_n1Pjb32LB8grjRZBvrFFyn_?usp=sharing)
-
-
 
 ---
 
