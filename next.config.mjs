@@ -1,62 +1,3 @@
-<<<<<<< HEAD
-let userConfig=undefined
-try
-{
-        userConfig=await import( './v0-user-next.config' )
-} catch ( e )
-{
-        // ignore error
-}
-
-/** @type {import('next').NextConfig} */
-const nextConfig={
-        eslint: {
-                ignoreDuringBuilds: true,
-        },
-        typescript: {
-                ignoreBuildErrors: true,
-        },
-        images: {
-                unoptimized: true,
-        },
-        experimental: {
-                runtime: 'nodejs',
-                webpackBuildWorker: true,
-                parallelServerBuildTraces: true,
-                parallelServerCompiles: true,
-                middleware: {
-                        // Set to false to use Node.js for middleware
-                        useEdgeRuntime: false,
-                },
-        },
-}
-
-mergeConfig( nextConfig, userConfig )
-
-function mergeConfig ( nextConfig, userConfig )
-{
-        if ( !userConfig )
-        {
-                return
-        }
-
-        for ( const key in userConfig )
-        {
-                if (
-                        typeof nextConfig[ key ]==='object'&&
-                        !Array.isArray( nextConfig[ key ] )
-                )
-                {
-                        nextConfig[ key ]={
-                                ...nextConfig[ key ],
-                                ...userConfig[ key ],
-                        }
-                } else
-                {
-                        nextConfig[ key ]=userConfig[ key ]
-                }
-        }
-=======
 let userConfig = undefined
 try {
   userConfig = await import('./v0-user-next.config')
@@ -102,7 +43,6 @@ function mergeConfig(nextConfig, userConfig) {
       nextConfig[key] = userConfig[key]
     }
   }
->>>>>>> ashish
 }
 
 export default nextConfig

@@ -19,19 +19,9 @@
       }
     ],
     "paths": {
-<<<<<<< HEAD
-      "@/*": ["./*"],
-      "@components/*": ["./components/*"],
-      "@lib/*": ["./lib/*"],
-      "@utils/*": ["./utils/*"]
-    }
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/utils.ts", "lib/mongodb.js", "lib/auth.ts", "lib/actions/auth-actions.js", "lib/models/user.js"],
-=======
       "@/*": ["./*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
->>>>>>> ashish
   "exclude": ["node_modules"]
 }

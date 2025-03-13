@@ -9,11 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-<<<<<<< HEAD
-import { registerUser } from "@/lib/actions/auth-actions"
-=======
 import { registerUser } from "@/lib/api"
->>>>>>> ashish
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -31,8 +27,6 @@ const formSchema = z.object({
   phone: z.string().min(10, {
     message: "Please enter a valid phone number.",
   }),
-<<<<<<< HEAD
-=======
   // Adding isDonor field with default value
   isDonor: z.boolean().default(true),
   // Placeholder for location since it's required by registerUser
@@ -45,7 +39,6 @@ const formSchema = z.object({
     lng: 0,
     address: "",
   }),
->>>>>>> ashish
 })
 
 export function RegisterForm() {
@@ -61,15 +54,12 @@ export function RegisterForm() {
       password: "",
       bloodType: "",
       phone: "",
-<<<<<<< HEAD
-=======
       isDonor: true,
       location: {
         lat: 0,
         lng: 0,
         address: "",
       },
->>>>>>> ashish
     },
   })
 
@@ -78,16 +68,6 @@ export function RegisterForm() {
     setError("")
 
     try {
-<<<<<<< HEAD
-      const result = await registerUser(values)
-      if (result.success) {
-        router.push("/login?registered=true")
-      } else {
-        setError(result.error || "Registration failed. Please try again.")
-      }
-    } catch (error) {
-      setError("An unexpected error occurred. Please try again.")
-=======
       // Pass individual parameters to registerUser
       // Pass null instead of undefined for lastDonationDate to avoid Firebase errors
       const result = await registerUser(
@@ -119,7 +99,6 @@ export function RegisterForm() {
       } else {
         setError("An unexpected error occurred. Please try again.")
       }
->>>>>>> ashish
       console.error(error)
     } finally {
       setIsLoading(false)
@@ -215,9 +194,4 @@ export function RegisterForm() {
       </form>
     </Form>
   )
-<<<<<<< HEAD
 }
-
-=======
-}
->>>>>>> ashish
