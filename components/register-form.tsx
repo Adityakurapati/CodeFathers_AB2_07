@@ -9,7 +9,11 @@ import { Button } from "@/components/ui/button"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+<<<<<<< HEAD
 import { registerUser } from "@/lib/actions/auth-actions"
+=======
+import { registerUser } from "@/lib/api"
+>>>>>>> ashish
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -27,6 +31,21 @@ const formSchema = z.object({
   phone: z.string().min(10, {
     message: "Please enter a valid phone number.",
   }),
+<<<<<<< HEAD
+=======
+  // Adding isDonor field with default value
+  isDonor: z.boolean().default(true),
+  // Placeholder for location since it's required by registerUser
+  location: z.object({
+    lat: z.number().default(0),
+    lng: z.number().default(0),
+    address: z.string().default(""),
+  }).default({
+    lat: 0,
+    lng: 0,
+    address: "",
+  }),
+>>>>>>> ashish
 })
 
 export function RegisterForm() {
@@ -42,6 +61,15 @@ export function RegisterForm() {
       password: "",
       bloodType: "",
       phone: "",
+<<<<<<< HEAD
+=======
+      isDonor: true,
+      location: {
+        lat: 0,
+        lng: 0,
+        address: "",
+      },
+>>>>>>> ashish
     },
   })
 
@@ -50,6 +78,7 @@ export function RegisterForm() {
     setError("")
 
     try {
+<<<<<<< HEAD
       const result = await registerUser(values)
       if (result.success) {
         router.push("/login?registered=true")
@@ -58,6 +87,39 @@ export function RegisterForm() {
       }
     } catch (error) {
       setError("An unexpected error occurred. Please try again.")
+=======
+      // Pass individual parameters to registerUser
+      // Pass null instead of undefined for lastDonationDate to avoid Firebase errors
+      const result = await registerUser(
+        values.email,
+        values.password,
+        values.name,
+        values.bloodType,
+        values.phone, // This is phoneNumber in the API function
+        values.location, // Location with lat, lng, address
+        values.isDonor,
+        null // lastDonationDate (use null instead of undefined)
+      )
+      
+      if (result && result.success) {
+        router.push("/login?registered=true")
+      } else {
+        setError("Registration failed. Please try again.")
+      }
+    } catch (error) {
+      // Handle specific Firebase errors
+      if (error instanceof Error) {
+        if (error.message.includes("auth/email-already-in-use")) {
+          setError("This email is already registered. Please use a different email or login.")
+        } else if (error.message.includes("auth/invalid")) {
+          setError("Invalid email or password format.")
+        } else {
+          setError(`Registration error: ${error.message}`)
+        }
+      } else {
+        setError("An unexpected error occurred. Please try again.")
+      }
+>>>>>>> ashish
       console.error(error)
     } finally {
       setIsLoading(false)
@@ -153,5 +215,9 @@ export function RegisterForm() {
       </form>
     </Form>
   )
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> ashish

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+<<<<<<< HEAD
 import Link from "next/link"
 import { Bell, Calendar, Droplet, Gift, Home, Share2, Trophy, User } from "lucide-react"
 
@@ -12,6 +13,17 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { BadgeDisplay } from "@/components/badge-display"
 import { SocialSharingComponent } from "@/components/social-sharing-component"
 import { SponsorRewards } from "@/components/sponsor-rewards"
+=======
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+
+import { ProfileHeader } from "@/components/profile/profile-header"
+import { ProfileSidebar } from "@/components/profile/profile-sidebar"
+import { ProfileOverviewTab } from "@/components/profile/tabs/overview-tab"
+import { ProfileBadgesTab } from "@/components/profile/tabs/badges-tab"
+import { ProfileRewardsTab } from "@/components/profile/tabs/rewards-tab"
+import { ProfileHealthTab } from "@/components/profile/tabs/health-tab"
+import { SocialSharingComponent } from "@/components/social-sharing-component"
+>>>>>>> ashish
 
 // Mock data for demonstration
 const donorProfile = {
@@ -132,10 +144,51 @@ const donorProfile = {
       points: 300,
     },
   ],
+<<<<<<< HEAD
 }
 
 export default function ProfilePage() {
   const [activeTab, setActiveTab] = useState("overview")
+=======
+  // Mock active donation data
+  activeDonation: {
+    id: "donation-005",
+    patientName: "Emily Wilson",
+    hospitalName: "ABC Hospital",
+    bloodType: "O+",
+    donationDate: "2023-03-07",
+    status: "transported",
+    eta: "2 hours",
+    stages: [
+      { name: "Matched", completed: true, timestamp: "2023-03-07T09:30:00" },
+      { name: "Collected", completed: true, timestamp: "2023-03-07T10:15:00" },
+      { name: "Transported", completed: true, timestamp: "2023-03-07T11:00:00" },
+      { name: "Delivered", completed: false, estimatedTime: "2023-03-07T13:00:00" },
+    ],
+  },
+  // Mock health data
+  healthData: {
+    lastTestDate: "2023-02-10",
+    bloodPressure: "120/80",
+    hemoglobin: 14.2,
+    ironLevel: 95,
+    cholesterol: {
+      total: 180,
+      hdl: 60,
+      ldl: 100,
+    },
+    bloodSugar: 85,
+    reports: [
+      { id: "report-001", name: "Complete Blood Count", date: "2023-02-10", fileUrl: "#" },
+      { id: "report-002", name: "Lipid Profile", date: "2023-01-15", fileUrl: "#" },
+      { id: "report-003", name: "Iron Studies", date: "2022-11-20", fileUrl: "#" },
+    ],
+  },
+}
+
+export default function ProfilePage() {
+  const [activeTab, setActiveTab] = useState<string>("overview")
+>>>>>>> ashish
   const [showSocialSharing, setShowSocialSharing] = useState(false)
 
   const earnedBadges = donorProfile.badges.filter((badge) => badge.earned)
@@ -145,6 +198,7 @@ export default function ProfilePage() {
 
   return (
     <div className="flex min-h-screen flex-col">
+<<<<<<< HEAD
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center">
           <div className="flex items-center gap-2 font-bold text-xl text-primary">
@@ -178,10 +232,14 @@ export default function ProfilePage() {
           </nav>
         </div>
       </header>
+=======
+      <ProfileHeader />
+>>>>>>> ashish
 
       <main className="flex-1">
         <div className="container py-6">
           <div className="flex flex-col gap-6 md:flex-row">
+<<<<<<< HEAD
             <div className="md:w-1/3">
               <Card>
                 <CardHeader className="pb-2">
@@ -369,6 +427,40 @@ export default function ProfilePage() {
 
                 <TabsContent value="rewards" className="pt-4">
                   <SponsorRewards availableRewards={availableRewards} redeemedRewards={redeemedRewards} />
+=======
+            <ProfileSidebar profile={donorProfile} onShareClick={() => setShowSocialSharing(true)} />
+
+            <div className="md:w-2/3">
+              <Tabs value={activeTab} onValueChange={setActiveTab}>
+                <TabsList className="grid w-full grid-cols-4">
+                  <TabsTrigger value="overview">Overview</TabsTrigger>
+                  <TabsTrigger value="badges">Badges</TabsTrigger>
+                  <TabsTrigger value="rewards">Rewards</TabsTrigger>
+                  <TabsTrigger value="health">Health Insights</TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="overview" className="space-y-6 pt-4">
+                  <ProfileOverviewTab
+                    earnedBadges={earnedBadges}
+                    availableRewards={availableRewards}
+                    achievements={donorProfile.achievements}
+                    activeDonation={donorProfile.activeDonation}
+                    onViewAllBadges={() => setActiveTab("badges")}
+                    onViewAllRewards={() => setActiveTab("rewards")}
+                  />
+                </TabsContent>
+
+                <TabsContent value="badges" className="pt-4">
+                  <ProfileBadgesTab earnedBadges={earnedBadges} inProgressBadges={inProgressBadges} />
+                </TabsContent>
+
+                <TabsContent value="rewards" className="pt-4">
+                  <ProfileRewardsTab availableRewards={availableRewards} redeemedRewards={redeemedRewards} />
+                </TabsContent>
+
+                <TabsContent value="health" className="pt-4">
+                  <ProfileHealthTab healthData={donorProfile.healthData} />
+>>>>>>> ashish
                 </TabsContent>
               </Tabs>
             </div>
